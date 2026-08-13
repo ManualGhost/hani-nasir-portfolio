@@ -1,0 +1,35 @@
+---
+import '../styles/global.css';
+import { site } from '../config/site.js';
+const base = import.meta.env.BASE_URL;
+const pageTitle = Astro.props.title ? `${Astro.props.title} — ${site.name}` : `${site.name} — ${site.role}`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#070707" />
+    <meta name="description" content={site.intro} />
+    <title>{pageTitle}</title>
+    <link rel="icon" href={`${base}favicon.svg`} />
+  </head>
+  <body>
+    <canvas id="webgl" aria-hidden="true"></canvas>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <header class="site-header">
+      <a href={base}>{site.name}</a>
+      <span class="center">Selected work / 2026</span>
+      <nav class="right" aria-label="Primary navigation">
+        <a href={`${base}about/`}>Info</a>
+        <a href={`mailto:${site.email}`}>Contact</a>
+      </nav>
+    </header>
+    <main class="transition-fade">
+      <slot />
+    </main>
+    <script>
+      import '../scripts/scene.js';
+    </script>
+  </body>
+</html>

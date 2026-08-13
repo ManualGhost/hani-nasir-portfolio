@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../config/site.js';
+---
+<Base title="Info">
+  <section class="about-page">
+    <h1>Designing between screen and space.</h1>
+    <div class="about-grid">
+      <p>{site.intro} I use brand design, CGI, motion and interactive technology as one connected toolkit rather than separate disciplines.</p>
+      <div class="small">
+        <p>Based in {site.city}</p>
+        <p>{site.availability}</p>
+        <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
+      </div>
+    </div>
+  </section>
+</Base>

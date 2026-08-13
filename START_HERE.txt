@@ -1,0 +1,13 @@
+START HERE
+==========
+
+1) Unzip this project.
+2) Install Node.js 22 or newer.
+3) Open a terminal in this folder.
+4) Run: npm install
+5) Run: npm run dev
+6) Open the localhost link printed by Astro.
+7) Edit src/config/site.js with your name / email / projects.
+8) Replace the generated 3D project cards with your own work when ready.
+
+Full instructions: README.md

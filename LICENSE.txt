@@ -1,0 +1,3 @@
+Starter project code created for the recipient of this package may be used, modified and published for their own portfolio or client work.
+
+Third-party dependencies (Astro, Three.js, Lenis, Swup, GSAP and related packages) remain governed by their own licenses. Review their current license terms before commercial redistribution of the libraries themselves.

@@ -1,0 +1,70 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../config/site.js';
+---
+<Base>
+  <div class="story" data-scene-root>
+    <section class="panel panel--hero" data-scene-step="0">
+      <div class="hero-copy">
+        <div class="eyebrow">Portfolio / Experimental web</div>
+        <h1 class="hero-title">
+          <span>Digital</span><br />
+          <span class="outline">Worlds</span>
+        </h1>
+        <div class="hero-footer">
+          <span>{site.role}</span>
+          <span>Scroll to enter ↓</span>
+          <span>{site.city}</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" data-scene-step="1">
+      <h2 class="scene-title"><small>01 / identity</small>Form becomes signal.</h2>
+    </section>
+
+    <section class="panel panel--right" data-scene-step="2">
+      <h2 class="scene-title"><small>02 / spatial</small>Images become objects.</h2>
+    </section>
+
+    <section class="panel" data-scene-step="3">
+      <h2 class="scene-title"><small>03 / motion</small>Scroll becomes camera.</h2>
+    </section>
+
+    <section class="panel panel--right" data-scene-step="4">
+      <h2 class="scene-title"><small>04 / interactive</small>Cursor becomes force.</h2>
+    </section>
+  </div>
+
+  <section class="manifesto">
+    <h2>Make it<br />feel alive.</h2>
+    <div class="manifesto-copy">
+      <p>{site.intro}</p>
+      <p class="small">This starter uses Three.js for the WebGL scene, GSAP ScrollTrigger for the scroll choreography, Lenis for smooth scrolling and Astro + Swup for the site shell and page transitions.</p>
+    </div>
+  </section>
+
+  <section class="project-list" id="work">
+    <div class="project-kicker">Selected projects</div>
+    {site.projects.map((project) => (
+      <div class="project-row">
+        <span class="num">{project.number}</span>
+        <span class="title">{project.title}</span>
+        <span class="type">{project.type}</span>
+        <span class="year">{project.year}</span>
+      </div>
+    ))}
+  </section>
+
+  <section class="cta">
+    <div class="cta-top">
+      <span>{site.availability}</span>
+      <span>End / start again</span>
+    </div>
+    <h2>Have a project?</h2>
+    <a class="cta-link" href={`mailto:${site.email}`}>
+      <span>{site.email}</span>
+      <span>↗</span>
+    </a>
+  </section>
+</Base>
