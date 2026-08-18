@@ -1,8 +1,8 @@
 export const site = {
-  name: 'YOUR NAME',
+  name: 'HANI NASIR',
   role: 'Independent Designer / 3D / Motion',
-  city: 'YOUR CITY',
-  email: 'hello@example.com',
+  city: 'ABU DHABI',
+  email: 'abazarhani@gmail.com',
   availability: 'Available for selected freelance projects',
   intro: 'Brand systems, spatial design and digital experiences built with a cinematic point of view.',
   projects: [
